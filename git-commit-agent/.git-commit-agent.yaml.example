@@ -1,0 +1,27 @@
+# Git Commit Message Agent Configuration
+# Copy this file to ~/.git-commit-agent.yaml or {repo_root}/.git-commit-agent.yaml
+
+# Maximum characters to include from diff (larger diffs will be truncated)
+max_diff_chars: 50000
+
+# Claude model to use for generating commit messages
+model: claude-sonnet-4-5-20250929
+
+# Temperature for AI generation (0.0 = deterministic, 1.0 = creative)
+temperature: 0.7
+
+# Maximum number of retries for API calls
+max_retries: 3
+
+# Allowed commit types (conventional commits format)
+commit_types:
+  - feat      # New feature
+  - fix       # Bug fix
+  - docs      # Documentation changes
+  - style     # Code style changes (formatting, etc.)
+  - refactor  # Code refactoring
+  - test      # Adding or updating tests
+  - chore     # Maintenance tasks
+  - perf      # Performance improvements
+  - ci        # CI/CD changes
+  - build     # Build system changes
